@@ -1,0 +1,15 @@
+/* CONTAINER */
+
+.header {
+    position: fixed;
+    margin-left: 70px;
+    margin-top: -22px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 6;
+}
+
+.container {
+    margin-left: 70px;
+    padding-top: 40px;
+}

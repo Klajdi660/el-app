@@ -1,22 +1,17 @@
-import React from "react";
 import Filter from "../filter/Filter";
-import Search from "../search/Search";
-import Header from "../header/Header";
-import MoviesList from "../moviesList/MoviesList";
+import ImagesDataList from "../imagesDataList/ImagesDataList";
 import "./Container.css";
 
 const Container = () => {
   return (
     <>
       <div className="header">
-        <Search/>
+        <Filter/>
       </div>
       <div className="container">
-        {/* <Search /> */}
-        <Filter/>
-        <Header/>
-        <MoviesList />
+        <ImagesDataList />
       </div>
+      <div className="footer"></div>
     </>
   );
 };

@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import MovieContext from "../../store/MovieContext";
+import ImageContext from "../../store/ImageContext";
 import genres from "../../genres";
 import { BiArrowFromRight } from "react-icons/bi";
 import { MdMoreHoriz } from "react-icons/md";
 import "./Filter.css";
 
 const Filter = () => {
-  const { setActiveGenre, activeGenre, setFiltered, movies, header } = useContext(MovieContext);
+  const { setActiveGenre, activeGenre, setFiltered, movies } = useContext(ImageContext);
   const [moreGenres, setMoreGenres] = useState(false);
 
   useEffect(() => {
@@ -19,25 +19,20 @@ const Filter = () => {
       setFiltered(filtered);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeGenre, header]);
+  }, [activeGenre]);
 
   return (
     <div className="filter-container">
-      <button
-        className={activeGenre === 0 ? "active" : null}
-        onClick={() => setActiveGenre(0)}
-      >
+      <button className={activeGenre === 0 ? "active" : null}>
         All
       </button>
       <button
         className={activeGenre === 28 ? "active" : null}
-        onClick={() => setActiveGenre(28)}
       >
         Action
       </button>
       <button
         className={activeGenre === 12 ? "active" : null}
-        onClick={() => setActiveGenre(12)}
       >
         Adventure
       </button>

@@ -1,5 +1,4 @@
 /* CONTAINER */
-
 .header {
     position: fixed;
     margin-left: 70px;
@@ -11,5 +10,5 @@
 
 .container {
     margin-left: 70px;
-    padding-top: 40px;
+    padding-top: 80px;
 }
